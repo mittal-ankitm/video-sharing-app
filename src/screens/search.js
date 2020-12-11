@@ -13,7 +13,7 @@ import Constant from 'expo-constants'
 
 import {useSelector,useDispatch} from 'react-redux'
 
-//https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=songs&type=video&key=AIzaSyC82F0xhZCs6eqj0x42J2hENVZlsQKzM5c
+//https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=query&type=video&key=APIKey
 const Search=({navigation})=>{
     const [val,setval] =useState("")
     //const [datav,setdata]=useState([])
@@ -25,7 +25,7 @@ const Search=({navigation})=>{
     const arr=[1,2,3,4,5]
     const fetchdata=()=>{
         
-        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${val}&type=video&key=AIzaSyC82F0xhZCs6eqj0x42J2hENVZlsQKzM5c`,{
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${val}&type=video&key=APIKey`,{
             method:"GET"
         })
         .then(res=>res.json())
